@@ -12,3 +12,8 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 pub fn something_owned() -> String{
     String::from("oh hai")
 }
+
+#[wasm_bindgen]
+pub fn take_js_value_by_value(x: JsValue) -> JsValue {
+    x
+}
